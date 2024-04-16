@@ -336,3 +336,23 @@ console.log((2.7).toFixed(0)); // 3 as a string
 console.log((2.7).toFixed(3)); // 2.700 as a string
 console.log((2.345).toFixed(2)); // 2.35 as a string
 console.log(+(2.345).toFixed(2)); // 2.35 as a number
+
+///////////////////////REMAINDER OPERATOR//////////////////////////
+// usefull for doing stuff every nth time
+console.log(5 % 2); // 1
+// how many 2 can there be in 5 and whatever left of that is the result
+console.log(5 / 2); // 2.5
+
+// check if even number function
+const isEven = n => n % 2 === 0;
+console.log(isEven(8));
+console.log(isEven(23));
+
+labelBalance.addEventListener('click', function () {
+  [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
+    // 0, 2, 4, 6
+    if (i % 2 === 0) row.style.backgroundColor = 'orangered';
+    // 0, 3, 6, 9
+    if (i % 3 === 0) row.style.backgroundColor = 'blue';
+  });
+});
