@@ -14,3 +14,4 @@ Math.ceil()\
 Math.floor()\
 Math.trunc()\
 (x).toFixed(decimalsTohave)\
+const isEven = n => n % 2 === 0;\
