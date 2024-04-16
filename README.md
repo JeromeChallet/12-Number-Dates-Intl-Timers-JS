@@ -15,3 +15,5 @@ Math.floor()\
 Math.trunc()\
 (x).toFixed(decimalsTohave)\
 const isEven = n => n % 2 === 0;\
+BigInt()\
+Nu,ber.MAX_SAFE_INTEGER\
