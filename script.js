@@ -366,3 +366,37 @@ console.log(diameter); // 287460000000
 console.log(Number('230000')); // 230000
 console.log(Number('230_000')); // NaN
 console.log(parseInt('230_000')); // 230
+
+///////////////////////WORKING WITH BIGINT//////////////////////////
+// numbers are represented as 64bits meaning there are 64 1 or 0 to store the numbers
+// out of those 64 bits, only 53 are used to store the digits themselves,
+// the rest are used to store the position of the decimal point and sign
+
+// calculate the limit a number can be
+console.log(2 ** 53 - 1); // 9,007,199,254,740,991
+console.log(Number.MAX_SAFE_INTEGER); // 9,007,199,254,740,991
+
+// any numbers passed its biggest safe value, JS use some trick to represent them but its random
+// sometimes the numbers are correct, sometimes they are not
+console.log(2 ** 53 + 1); // 9,007,199,254,740,992
+
+// convert a regular number into a bigInt number
+console.log(5646435131561851355438445353448635435n); // 5646435131561851355438445353448635435n
+console.log(BigInt(5646435131561851355438445353448635435)); // 5646435131561851355438445353448635435n
+
+console.log(Math.sqrt(16n)); // error
+
+// you cant mix BigInt with regular numbers
+const hugeNumber = 68184654846868476848n;
+const regularNumber = 56;
+console.log(hugeNumber * regularNumber); // error
+console.log(hugeNumber * BigInt(regularNumber)); // ok
+
+console.log(20n > 15); // true
+// it wont work cause they are of different type
+console.log(20n === 20); // false
+console.log(20n == 20); // true
+
+console.log(hugeNumber + ' is really big'); // 68184654846868476848 is really big
+// will cut off the decimal part
+console.log(10n / 3n); // 3n
