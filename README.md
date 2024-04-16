@@ -16,4 +16,19 @@ Math.trunc()\
 (x).toFixed(decimalsTohave)\
 const isEven = n => n % 2 === 0;\
 BigInt()\
-Nu,ber.MAX_SAFE_INTEGER\
+Number.MAX*SAFE_INTEGER\
+const now = new Date();\
+date.getMonth();\
+date.getDate();\
+date.getDay();\
+date.getHours();\
+date.getMinutes();\
+date.getSeconds();\
+date.toISOString();\
+date.getTime();\
+date.now();\
+date.setFullYear(2040);\
+const calcDaysPassed = (date1, date2) =>\
+ Math.abs(date2 - date1) / (1000 * 60 \_ 60 \* 24);\
+labelDate.textContent = new Intl.DateTimeFormat('en-US').format(now);\
+const locale = navigation.language;\
