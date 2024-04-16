@@ -32,3 +32,4 @@ const calcDaysPassed = (date1, date2) =>\
  Math.abs(date2 - date1) / (1000 * 60 \_ 60 \* 24);\
 labelDate.textContent = new Intl.DateTimeFormat('en-US').format(now);\
 const locale = navigation.language;\
+setTimeout(() => thingtodo, 3000);\
